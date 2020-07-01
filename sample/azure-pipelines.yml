@@ -17,8 +17,8 @@ steps:
     subscriptionId: '6b18e45a-4c0e-477b-985b-a6609fdc1d6d'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
-    csmFile: 'az-deploy.json'
-    csmParametersFile: 'az-deploy.parameters.json'
+    csmFile: '$(Build.SourcesDirectory)/StorageAccount/az-deploy.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/StorageAccount/az-deploy.parameters.json'
     deploymentMode: 'Incremental'
     deploymentOutputs: 'outputs'
   continueOnError: false
@@ -50,7 +50,7 @@ steps:
     subscriptionId: '6b18e45a-4c0e-477b-985b-a6609fdc1d6d'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
-    csmFile: 'az-peer-vnets.json'
+    csmFile: '$(Build.SourcesDirectory)/StorageAccount/az-peer-vnets.json'
     overrideParameters: '-pvnetid $(pvnetid) -svnetid $(svnetid) -pvnetrg $(pvnetrg) -svnetrg $(svnetrg)'
     deploymentMode: 'Incremental'
   continueOnError: true
