@@ -13,7 +13,7 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
-    azureResourceManagerConnection: 'Azure Subscription Connection Manager(6b18e45a-4c0e-477b-985b-a6609fdc1d6d)'
+    azureResourceManagerConnection: 'jnazuredevopsglobalconnection'
     subscriptionId: '6b18e45a-4c0e-477b-985b-a6609fdc1d6d'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
@@ -46,7 +46,7 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
-    azureResourceManagerConnection: 'Azure Subscription Connection Manager(6b18e45a-4c0e-477b-985b-a6609fdc1d6d)'
+    azureResourceManagerConnection: 'jnazuredevopsglobalconnection'
     subscriptionId: '6b18e45a-4c0e-477b-985b-a6609fdc1d6d'
     location: 'Australia East'
     templateLocation: 'Linked artifact'
